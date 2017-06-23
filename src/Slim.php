@@ -578,10 +578,15 @@ class Slim implements AdapterInterface
      *
      * @param string $input
      * @return StreamInterface
+     * @throws \Error
      */
     public function stringToStream(string $input): StreamInterface
     {
+        /** @var resource $stream */
         $stream = \fopen('php://temp', 'w+');
+        if (!\is_resource($stream)) {
+            throw new \Error('Could not create stream');
+        }
         \fwrite($stream, $input);
         \rewind($stream);
         return new Stream($stream);
