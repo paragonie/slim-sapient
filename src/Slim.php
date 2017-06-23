@@ -27,7 +27,11 @@ use Slim\Http\{
     Uri
 };
 
-class Slim implements AdapterInterface
+/**
+ * Class Slim
+ * @package ParagonIE\Sapient\Adapter
+ */
+class Slim implements AdapterInterface, ConvenienceInterface
 {
     /**
      * Create an HTTP request object with a JSON body that is authenticated
