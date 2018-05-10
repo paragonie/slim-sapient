@@ -1,6 +1,7 @@
 {
   "name": "paragonie/slim-sapient",
   "description": "Sapient adapter for Slim framework's HTTP implementation",
+  "license": "MIT",
   "require": {
     "php": "^7",
     "paragonie/sapient": "^1",
