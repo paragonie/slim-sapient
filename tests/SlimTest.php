@@ -53,8 +53,9 @@ class SlimTest extends TestCase
 
     /**
      * Populate the methods.
+     * @before
      */
-    public function setup()
+    public function before()
     {
         $this->adapter = new Slim();
         $this->clientSignSecret = SigningSecretKey::generate();
